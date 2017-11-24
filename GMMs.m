@@ -13,12 +13,6 @@ end;
 if (isempty(cent_init))
   % Initial centers is an empty array, choose initial centers
   % randomly
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % TO DO: Complete this part so that your code chooses k initial
-  %        centers randomly. This comes down to picking random
-  %        entries in your data array.
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % picks k random numbers from 1 to number of data points (for indices)
   entries_i=randperm(size(data,1),k);
   % takes row vectors from data at indices specified above
