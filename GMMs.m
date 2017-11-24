@@ -1,54 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CSC C11 - Assignment 2 - Gaussian Mixture Models clustering
-%
-% In this function, you will implement Gaussian Mixture Models.
-%  the mixture models can be initialized randomly, or with the
-%  given initial centers.
-%  Covariance matrices are initialized to identity.
-%
-% function [centers,covariances,labels]=GMMs(data,cent_init,k)
-%
-% Inputs: data - an array of input data points size n x d, with n
-%                input points (one per row), each of length d.
-%         k - number of clusters
-%         cent_init - either an empty array '[]', or an array of
-%                     size k x d, with k initial cluster centers
-%
-% Outputs: centers - Final cluster centers
-%          covariances - Covariance matrices for the GMM components,
-%                        this will be an array of size
-%                        d x d x k, with each 'layer' of size
-%                        d x d corresponding to the covariance
-%                        matrix of one of the Gaussians in the model.
-%          mps - An array of size k x 1, with mixture proportions
-%                giving the percent of data assigned to each
-%                cluster. The sum of these has to be 1.
-%          labels - An array of size n x 1, with labels indicating
-%                   which cluster each input point belongs to.
-%                   e.g. if data point i belongs to cluster j,
-%                   then labels(i)=j
-%
-% Starter code: F. Estrada, Sep. 2017
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% COMPLETE THIS TEXT BOX:
-%
-% 1) Student Name: Brandon Bowen
-% 2) Student Name:
-%
-% 1) Student number: 1000459620
-% 2) Student number:
-%
-% 1) UtorID: bowenbra
-% 2) UtorID
-%
-% We hereby certify that the work contained here is our own
-%
-% _Brandon Bowen                   _____________________
-% (sign with your name)            (sign with your name)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [centers,covariances,mps,labels]=GMMs(data,cent_init,k)
 
@@ -82,28 +31,6 @@ else
   end;
   centers=cent_init;
 end;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% TO DO: Complete the function by implementing the E-M algorithm for
-%  estimating the parameters of a Gaussian Mixture Model
-%
-%        As a reminder, this is a loop that:
-%          * Assigns data points to the cluster that gives it maximum
-%            likelihood
-%          * Updates the cluster centers, covariances, and mixture
-%            proportions
-%          * Update the labels array to contain the index of the
-%            cluster center each point is assigned to
-%        Loop ends when the labels do not change from one iteration
-%         to the next.
-%
-%  DO NOT compute ownership probabilities for data points using
-%   a for loop over data points. Doing so will cause you to wait
-%   forever for this thing to converge. Your TA certainly won't
-%   wait that long.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %loop until convergence
 while 1
