@@ -13,4 +13,4 @@
 
 <b>PCA</b> : Principle Component Analysis
  - PCA is traditionally used to generate lower dimensional data. It can also be used to compress data and reduce noise in the data. PCA was used to reduce the dimensionality of the image from 3 to 2. The resulting data was then reconstructed from 2 to 3 and this image is the result of the reconstruction.
- ![PCA](/imgs/pca_reconstruction.png?raw=true)
+ ![PCA](/imgs/pcs_reconstruction.png?raw=true)
