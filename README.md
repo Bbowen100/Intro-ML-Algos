@@ -3,7 +3,8 @@
 
 ## Clustering
  ![Original Image](/imgs/GMM1.png?raw=true)
-<b>GMM</b> : Gaussian Mixture Models
+ 
+ <b>GMM</b> : Gaussian Mixture Models
  - A clustering algorithm that generates a set of gaussian distributions based on the training data and then uses the  max probability given by the distribution to predict which model generated the data. Below are pictures of the GMM algorithm being applied to an image of a flower. The GMM in this instance was tasked in finding 5 clusters for the data and cluster centers were picked at random from the dataset.
 ![GMM](/imgs/gmm_5_clusters.png?raw=true)
 
